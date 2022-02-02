@@ -4,15 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
         int clientOS = 0;
-        int clientDeviceYear = 2013;
+        int clientDeviceYear = 2015;
         if (clientOS == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else {
+        } else if (clientOS == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }
-        if (clientOS == 1 && clientDeviceYear >= 2015) {
+        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else {
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
 
@@ -30,9 +29,9 @@ public class Main {
         int deliveryDistance = 95;
         if (deliveryDistance < 20) {
             System.out.println("Потребуется 1 день для доставки");
-        } else if ((deliveryDistance > 20) && (deliveryDistance < 60)) {
+        } else if ((deliveryDistance >= 20) && (deliveryDistance < 60)) {
             System.out.println("Потребуются 2 дня для доставки");
-        } else {
+        } else if ((deliveryDistance >= 60) && (deliveryDistance < 100)) {
             System.out.println("Потребуются 3 дня для доставки");
         }
 
